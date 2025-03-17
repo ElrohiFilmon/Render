@@ -2,11 +2,12 @@
 
 {
     "name": "fanospay",
-    "version": "1.0.0",
+    "type": "module",
+    "version": "1.0.0", 
     "description": "Premium Telegram channel subscription service with TON payments",
     "main": "server.js",
     "scripts": {
-      "start": "node server.js",
+      "start": "yarn server.js",
       "dev": "nodemon server.js"
     },
     "dependencies": {
