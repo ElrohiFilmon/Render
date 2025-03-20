@@ -7,8 +7,8 @@
     "description": "Premium Telegram channel subscription service with TON payments",
     "main": "server.js",
     "scripts": {
-      "start": "yarn server.js",
-      "dev": "nodemon server.js"
+      "start": "node server.js",
+      "dev": "node server.js"
     },
     "dependencies": {
       "express": "^4.18.2",
