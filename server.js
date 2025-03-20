@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import { Telegraf } from 'telegraf';
 import { TelegramClient } from 'telegram';
-import { StringSession } from 'telegram/sessions';
+import { StringSession } from 'telegram/sessions/StringSession.js';
 import cron from 'node-cron';
 import fs from 'fs/promises';
 import path from 'path';
@@ -10,7 +10,8 @@ import dotenv from 'dotenv';
 import rateLimit from 'express-rate-limit'; // Express rate limiter
 import TonConnectSDK from '@tonconnect/sdk'; // Assuming you'll import TonConnect SDK like this
 
-dotenv.config();
+dotenv.config({ path: '/Users/elrohifilmon/Documents/vcs/github.com/elrohi/fanospay2/bot/.env' });
+
 
 const app = express();
 
@@ -247,7 +248,7 @@ async function startServices() {
     await bot.launch();
 
     app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
-      console.log(`Server running on port ${process.env.PORT || 3000}`);
+    console.log(`Server running on port ${process.env.PORT || 3000}`);
       console.log(`Bot @${bot.context.botInfo.username} operational`);
     });
 
